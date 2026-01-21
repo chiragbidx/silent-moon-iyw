@@ -10,183 +10,252 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     >
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+      body {
+        font-family: 'Inter', Arial, sans-serif;
+        background: #f8fafc;
+      }
+      .navbar {
+        box-shadow: 0 2px 8px rgba(30,34,90,0.05);
+      }
+      .hero-img {
+        max-width: 440px;
+        width: 100%;
+        border-radius: 1.5rem;
+        box-shadow: 0 8px 36px 0 rgba(0,0,0,.12);
+      }
+      .feature-icon {
+        width: 52px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1rem;
+        background: #eef2ff;
+        font-size: 2rem;
+        color: #4f46e5;
+        margin-bottom: 1.25rem;
+      }
+      .modern-section {
+        background: #fff;
+        border-radius: 1.5rem;
+        box-shadow: 0 4px 28px 0 rgba(34,41,90,.07);
+        padding: 2.5rem 2rem;
+        margin-bottom: 2.5rem;
+      }
+      .testimonial-card {
+        border: none;
+        border-radius: 1.5rem;
+        box-shadow: 0 4px 34px rgba(80,90,140,.09);
+        padding: 2rem;
+        background: #fff;
+      }
+      .footer-social a {
+        color: #adb5bd;
+        transition: color 0.2s;
+        font-size: 1.25rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+      .footer-social a:hover {
+        color: #4f46e5;
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-3">
       <div class="container">
-        <a class="navbar-brand" href="#">Bubble Agency</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand fw-bold text-primary" href="#">Bubble Agency</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold">
+            <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
-          <a href="#contact" class="btn btn-outline-success ms-lg-2">Book a Call</a>
+          <a href="#contact" class="btn btn-primary ms-lg-4 px-4">Let's Talk</a>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-light py-5 text-center">
-      <div class="container">
-        <h1 class="display-4 fw-bold mb-3">Build Your Next App with Expert Bubble Developers</h1>
-        <p class="lead mb-4">
-          Launch powerful, scalable web apps—without code. We specialize in crafting modern Bubble.io solutions for growing businesses.
-        </p>
-        <a href="#contact" class="btn btn-primary px-4 py-2">Request a Free Consultation</a>
+    <header class="py-5" id="hero">
+      <div class="container align-items-center row mx-auto flex-column-reverse flex-lg-row">
+        <div class="col-lg-6 text-center text-lg-start d-flex flex-column justify-content-center">
+          <h1 class="display-4 fw-bold mb-3">
+            Build and Launch with <span class="text-primary">Bubble Experts</span>
+          </h1>
+          <p class="lead mb-4 text-secondary">
+            We help founders and teams build, launch, and scale powerful Bubble apps in weeks—no code required.
+          </p>
+          <a href="#contact" class="btn btn-primary px-5 py-3 fw-semibold shadow">Get a Free Consultation</a>
+        </div>
+        <div class="col-lg-6 mb-4 mb-lg-0 d-flex justify-content-center align-items-center">
+          <img src="https://pixabay.com/get/gd5c4ae118e0e7d03cbf6f542c3ba70c71b43647f32406031d6105d7f44de529f23287d09e8a1f96fe137ddfcda77c40462b1fac406677b4556862c7885c1f3a9_640.png" alt="Building Bubble Apps" class="hero-img img-fluid">
+        </div>
+      </div>
+    </header>
+
+    <!-- Features / Services Section -->
+    <section id="features" class="pb-5">
+      <div class="container modern-section mt-3">
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-8 text-center">
+            <h2 class="fw-bold mb-2">What We Do</h2>
+            <p class="text-secondary mb-0">
+              From MVP to scale—your Bubble journey, expertly guided every step of the way.
+            </p>
+          </div>
+        </div>
+        <div class="row gy-5">
+          <div class="col-md-4 text-center">
+            <div class="feature-icon mx-auto"><i class="bi bi-lightning-charge-fill"></i></div>
+            <h5 class="fw-semibold mb-2">Rapid Bubble App Development</h5>
+            <p>Quickly launch fully functional, scalable web apps using Bubble.io—without compromise.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="feature-icon mx-auto"><i class="bi bi-brush-fill"></i></div>
+            <h5 class="fw-semibold mb-2">Custom UI/UX Design</h5>
+            <p>Intuitive, beautiful interfaces crafted for engagement and conversion on every device.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="feature-icon mx-auto"><i class="bi bi-plug-fill"></i></div>
+            <h5 class="fw-semibold mb-2">API & Integration Services</h5>
+            <p>Connect any service or data source—Stripe, Zapier, Airtable, and more.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- About Section -->
-    <section class="py-5">
+    <section id="about" class="pb-5">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 mb-4 mb-md-0">
-            <img src="https://pixabay.com/get/gd5c4ae118e0e7d03cbf6f542c3ba70c71b43647f32406031d6105d7f44de529f23287d09e8a1f96fe137ddfcda77c40462b1fac406677b4556862c7885c1f3a9_640.png" class="img-fluid rounded shadow" alt="Building Bubble Apps">
+        <div class="row modern-section align-items-center">
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <img src="https://pixabay.com/get/gd5c4ae118e0e7d03cbf6f542c3ba70c71b43647f32406031d6105d7f44de529f23287d09e8a1f96fe137ddfcda77c40462b1fac406677b4556862c7885c1f3a9_640.png"
+              alt="Building Bubble Apps" class="img-fluid rounded shadow">
           </div>
-          <div class="col-md-6">
-            <h2 class="fw-semibold mb-3">Your Bubble Development Partner</h2>
+          <div class="col-lg-7">
+            <h2 class="fw-bold mb-3">Your Partner in No-Code Excellence</h2>
             <p>
-              Leverage the power of no-code to accelerate your ideas. Our experienced team delivers robust, user-friendly, and scalable applications using Bubble.io, tailored to your business needs. From MVPs to production-scale apps, we guide you at every step.
+              Our team of Bubble-certified experts brings experience, creativity, and rapid prototyping to every project. We transform ideas into production-ready apps—on time and on budget.
             </p>
             <ul class="list-unstyled">
-              <li class="mb-2"><span class="text-success">&#10003;</span> Rapid Prototyping & Launch</li>
-              <li class="mb-2"><span class="text-success">&#10003;</span> Custom Workflows & Integrations</li>
-              <li class="mb-2"><span class="text-success">&#10003;</span> UI/UX Excellence</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>MVP to Full Product</strong>: Zero technical debt, ready for scale.</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Transparent Process</strong>: Dedicated PMs and clear updates.</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Continuous Support</strong>: Post-launch assistance and roadmap guidance.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="bg-light py-5" id="services">
-      <div class="container">
-        <h2 class="text-center mb-5 fw-semibold">Our Services</h2>
-        <div class="row text-center">
-          <div class="col-md-4 mb-4">
-            <div class="card border-0 h-100 shadow-sm">
-              <div class="card-body">
-                <div class="mb-3"><span class="display-6 text-primary"><i class="bi bi-tools"></i></span></div>
-                <h5 class="card-title mb-2 fw-semibold">Bubble App Development</h5>
-                <p class="card-text">We build fully functional, scalable web applications on Bubble—fast.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card border-0 h-100 shadow-sm">
-              <div class="card-body">
-                <div class="mb-3"><span class="display-6 text-primary"><i class="bi bi-brush"></i></span></div>
-                <h5 class="card-title mb-2 fw-semibold">UI/UX Design</h5>
-                <p class="card-text">Beautiful interfaces optimized for usability, accessibility, and conversion.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card border-0 h-100 shadow-sm">
-              <div class="card-body">
-                <div class="mb-3"><span class="display-6 text-primary"><i class="bi bi-kanban"></i></span></div>
-                <h5 class="card-title mb-2 fw-semibold">API Integrations</h5>
-                <p class="card-text">Connect your Bubble app to any service or data source through robust integrations.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Testimonials Section -->
-    <section class="py-5" id="testimonials">
+    <section id="testimonials" class="pb-5">
       <div class="container">
-        <h2 class="text-center mb-5 fw-semibold">Trusted by Innovators & Startups</h2>
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <blockquote class="blockquote text-center">
-                <p class="mb-4">“Our MVP went from idea to launch in weeks. The Bubble Agency team is fast, thorough, and delivers.”</p>
-                <footer class="blockquote-footer">Alex B., SaaS Founder</footer>
+        <div class="row mb-4">
+          <div class="col-12 text-center">
+            <h2 class="fw-bold mb-3">What Our Clients Say</h2>
+            <p class="text-secondary mb-0">Real results from real entrepreneurs and teams.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center gy-4">
+          <div class="col-md-4">
+            <div class="testimonial-card h-100">
+              <blockquote class="blockquote mb-3">
+                <p>“We launched our startup in record time, thanks to the expertise and dedication of the Bubble Agency team.”</p>
               </blockquote>
-            </div>
-            <div class="carousel-item">
-              <blockquote class="blockquote text-center">
-                <p class="mb-4">“The integration with external APIs was seamless. Highly recommend for fast-growing businesses.”</p>
-                <footer class="blockquote-footer">Priya K., Operations Manager</footer>
-              </blockquote>
-            </div>
-            <div class="carousel-item">
-              <blockquote class="blockquote text-center">
-                <p class="mb-4">“From design to deployment, their knowledge of Bubble is unmatched!”</p>
-                <footer class="blockquote-footer">Liam S., Product Lead</footer>
-              </blockquote>
+              <div class="d-flex align-items-center mt-4">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="48" height="48" alt="Client - Alex B.">
+                <span>
+                  <strong>Alex B.</strong><br>
+                  <span class="text-secondary small">SaaS Founder</span>
+                </span>
+              </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+          <div class="col-md-4">
+            <div class="testimonial-card h-100">
+              <blockquote class="blockquote mb-3">
+                <p>“The process was transparent and quick, and our app integrated seamlessly with all our tools.”</p>
+              </blockquote>
+              <div class="d-flex align-items-center mt-4">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle me-3" width="48" height="48" alt="Client - Priya K.">
+                <span>
+                  <strong>Priya K.</strong><br>
+                  <span class="text-secondary small">Operations Manager</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card h-100">
+              <blockquote class="blockquote mb-3">
+                <p>“From sketches to launch, their Bubble knowledge was unmatched. Ongoing support is top-notch.”</p>
+              </blockquote>
+              <div class="d-flex align-items-center mt-4">
+                <img src="https://randomuser.me/api/portraits/men/85.jpg" class="rounded-circle me-3" width="48" height="48" alt="Client - Liam S.">
+                <span>
+                  <strong>Liam S.</strong><br>
+                  <span class="text-secondary small">Product Lead</span>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Modern CTA / Contact Section -->
     <section class="bg-primary text-white py-5" id="contact">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-8">
-            <h2 class="fw-bold mb-2">Ready to bring your Bubble app to life?</h2>
-            <p class="mb-0">Schedule your free consultation—let’s create something great together.</p>
-          </div>
-          <div class="col-md-4 text-md-end mt-4 mt-md-0">
-            <a href="mailto:hello@bubbleagency.com" class="btn btn-light btn-lg fw-semibold">Book a Call</a>
+        <div class="row justify-content-center">
+          <div class="col-lg-7 text-center">
+            <h2 class="fw-bold mb-2">Ready to Build?</h2>
+            <p class="lead mb-4 text-white-50">Let's bring your Bubble app idea to life.<br>Book a free consultation or start your project today!</p>
+            <a href="mailto:hello@bubbleagency.com" class="btn btn-light btn-lg px-5 fw-semibold mb-3">Contact Us</a>
+            <div>
+              <span class="text-white-50 small">Or email directly: <a href="mailto:hello@bubbleagency.com" class="text-white text-decoration-underline">hello@bubbleagency.com</a></span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 mb-3 mb-md-0">
-            <span class="navbar-brand text-white">Bubble Agency</span>
-            <span class="ms-2">© 2024 All rights reserved</span>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <a href="mailto:hello@bubbleagency.com" class="text-white me-3 text-decoration-none" aria-label="Email">hello@bubbleagency.com</a>
-            <a href="#" class="text-white me-2" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="text-white me-2" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="#" class="text-white" aria-label="GitHub"><i class="bi bi-github"></i></a>
-          </div>
+    <footer class="bg-white text-secondary py-4 border-top">
+      <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+        <div class="mb-3 mb-md-0">
+          <span class="fw-bold text-primary">Bubble Agency</span>
+          <span class="ms-3 small">© 2024 All rights reserved</span>
+        </div>
+        <div class="footer-social">
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
         </div>
       </div>
     </footer>
 
     <!-- PANDA ELEMENT SELECTION SCRIPT -->
     <script src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-element-selection.js" defer></script>
-
     <!-- PANDA BRANDING SCRIPT -->
     <script src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-branding.js" defer></script>
-
     <!-- PANDA AUTO RELOAD SCRIPT -->
     <script>
       const es = new EventSource("/__hmr");
       es.onmessage = () => location.reload();
     </script>
-
     <!-- Bootstrap JS (bundle includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-JXlBersrcXlaBk0z4RAvXjZHIwVca1WMl6K5Fi+x+TDjvZtrL0sKkEpOWKTAFi2Q"
       crossorigin="anonymous"></script>
-    <!-- Bootstrap Icons CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </body>
 </html>
